@@ -1,0 +1,119 @@
+{
+	"rules": [
+		{
+			"name": "yes-money-rest-rule",
+			"condition": "money > 2",
+			"assert": "money-rest-yes"
+		},
+		{
+			"name": "no-money-rest-rule",
+			"condition": "money <= 2",
+			"assert": "money-rest-no"
+		},
+		{
+			"name": "videocard",
+			"condition": "or(video-driver yes; stripes yes)",
+			"assert": "videocard yes"
+		},
+		{
+			"name": "determine-videocard",
+			"condition": "video-driver no, stripes no",
+			"assert": "videocard no"
+		},
+		{
+			"name": "motherboard",
+			"condition": "or(burned-elements yes; speaker-silent yes; swollen-capacitors yes)",
+			"assert": "motherboard yes"
+		},
+		{
+			"name": "determine-motherboard",
+			"condition": "and(burned-elements no; speaker-silent no; swollen-capacitors no)",
+			"assert": "motherboard no"
+		},
+		{
+			"name": "high-cost",
+			"condition": "motherboard yes, videocard yes",
+			"assert": "high-cost yes"
+		},
+		{
+			"name": "determine-high-cost",
+			"condition": "motherboard no, videocard no",
+			"assert": "high-cost no"
+		},
+		{
+			"name": "hdd",
+			"condition": "or(bsod yes; perf-degr yes)",
+			"assert": "hdd yes"
+		},
+		{
+			"name": "determine-hdd",
+			"condition": "and(bsod no; perf-degr no)",
+			"assert": "hdd no"
+		},
+		{
+			"name": "low-cost",
+			"condition": "or(motherboard yes; videocard yes), hdd yes",
+			"assert": "low-cost yes"
+		},
+		{
+			"name": "determine-low-cost",
+			"condition": "high-cost no, hdd no",
+			"assert": "low-cost no"
+		},
+		{
+			"name": "buy-new-pc",
+			"condition": "high-cost yes, money-rest-yes",
+			"assert": "repair 'Buy new pc'"
+		},
+		{
+			"name": "no-problem",
+			"condition": "high-cost no, low-cost no",
+			"assert": "repair 'No problem'"
+		},
+		{
+			"name": "replace-accessories",
+			"condition": "or(low-cost yes; high-cost yes), money-rest-no",
+			"assert": "repair 'Replace Accessories'"
+		},
+		{
+			"name": "video-driver",
+			"condition": "not video-driver",
+			"assert": "video-driver 'Is there a video driver error?'"
+		},
+		{
+			"name": "determine-stripes",
+			"condition": "not stripes, video-driver no",
+			"assert": "stripes 'Are there any stripes on the screen?'"
+		},
+		{
+			"name": "determine-burned-elements",
+			"condition": "not burned-elements",
+			"assert": "burned-elements 'Are there any burned out elements?'"
+		},
+		{
+			"name": "determine-speaker-silent",
+			"condition": "not speaker-silent, burned-elements no",
+			"assert": "speaker-silent 'Is the speaker silent?'"
+		},
+		{
+			"name": "determine-swollen-capacitors",
+			"condition": "speaker-silent no, burned-elements no, not swollen-capacitors",
+			"assert": "swollen-capacitors 'Are there swollen capacitors?'"
+		},
+		{
+			"name": "determine-bsod",
+			"condition": "not bsod",
+			"assert": "bsod 'Is there a BSOD?'"
+		},
+		{
+			"name": "determine-perf-degr",
+			"condition": "bsod no, not perf-degr",
+			"assert": "perf-degr  'Is there any performance degradation?'"
+		},
+		{
+			"name": "determine-money",
+			"condition": "not money",
+			"assert": "money 'How much can you spend, select price range? (10000-30000, 30000-49999, 50000+) '"
+		}	
+	]
+}

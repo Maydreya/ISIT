@@ -1,0 +1,12 @@
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\bin\Debug\CLIPS.exe.config
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\bin\Debug\CLIPS.exe
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\bin\Debug\CLIPS.pdb
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\bin\Debug\Newtonsoft.Json.dll
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\bin\Debug\Newtonsoft.Json.xml
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\obj\Debug\CLIPS.csprojResolveAssemblyReference.cache
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\obj\Debug\CLIPS.Form1.resources
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\obj\Debug\CLIPS.Properties.Resources.resources
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\obj\Debug\CLIPS.csproj.GenerateResource.Cache
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\obj\Debug\CLIPS.exe
+D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\obj\Debug\CLIPS.pdb
+d:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 2\CLIPS\CLIPS\obj\Debug\CLIPS.Form2.resources
