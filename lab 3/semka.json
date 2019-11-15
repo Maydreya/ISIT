@@ -1,0 +1,41 @@
+{
+  "semka": [
+    {
+      "name": "computer",
+      "bind": "partof",
+      "node": "screen, detail"
+    },
+    {
+      "name": "detail",
+      "bind": "partof",
+      "node": "motherboard, videocard, hdd"
+    },
+
+    {
+      "name": "problem",
+      "bind": "cause",
+      "node": "age, misuse"
+    },
+    {
+      "name": "age",
+      "bind": "10 years",
+      "node": "exploitation"
+    },
+    {
+      "name": "misuse",
+      "bind": "AKO",
+      "node": "Removing the plug from the outlet, Rare antivirus update, Non-compliance with temperature conditions"
+    },
+    {
+      "name": "problem",
+      "bind": "danger",
+      "node": "Not working PC"
+    },
+    {
+      "name": "Not working computer",
+      "bind": "result",
+      "node": "Loss of important information, Inability to complete work on time"
+    }
+    
+  ]
+}
