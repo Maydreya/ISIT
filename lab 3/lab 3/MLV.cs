@@ -49,7 +49,24 @@ namespace lab_3
                 name = Nodes[j];
                 for (int i = 0; i < KnowledgeBase.Nodes.Count; i++)
                 {
-                    if (KnowledgeBase.Nodes[i].name.Contains(name))
+                    if (j == 0 && KnowledgeBase.Nodes[i].name.Contains(name) && KnowledgeBase.Nodes[i].bind.Contains(KnowledgeBase.bind))
+                    {
+                        text.Text += KnowledgeBase.Nodes[i].name + " " + KnowledgeBase.Nodes[i].bind + " " + KnowledgeBase.Nodes[i].node + Environment.NewLine;
+                        if (KnowledgeBase.Nodes[i].node.Contains(","))
+                        {
+                            Node = KnowledgeBase.Nodes[i].node.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                            for (int u = 0; u < Node.Count(); u++)
+                            {
+                                Node[u] = Node[u].TrimStart(' ');
+                                Nodes.Add(Node[u]);
+                            }
+                        }
+                        else
+                        {
+                            Nodes.Add(KnowledgeBase.Nodes[i].node);
+                        }
+                    }
+                    else if(KnowledgeBase.Nodes[i].name.Contains(name) && name != KnowledgeBase.startname)
                     {
                         text.Text += KnowledgeBase.Nodes[i].name + " " + KnowledgeBase.Nodes[i].bind + " " + KnowledgeBase.Nodes[i].node + Environment.NewLine;
                         if (KnowledgeBase.Nodes[i].node.Contains(","))

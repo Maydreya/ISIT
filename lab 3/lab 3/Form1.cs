@@ -60,6 +60,7 @@ namespace lab_3
             {
                 richTextBox1.Clear();
                 KnowledgeBase.startname = "problem";
+                KnowledgeBase.bind = "cause";
                 mlv.Run(mlv.Check(KnowledgeBase.startname), richTextBox1);
             }
             else

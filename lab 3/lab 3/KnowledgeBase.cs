@@ -10,7 +10,7 @@ namespace lab_3
     {
         //Список узлов
         public static List<NodesItem> Nodes = new List<NodesItem>();
-        public static string startname;
+        public static string startname, bind;
         public static int count = 0;
     }
 }

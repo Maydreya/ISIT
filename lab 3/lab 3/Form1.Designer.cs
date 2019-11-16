@@ -30,10 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.загрузитьБазуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.загрузитьБазуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,13 +61,20 @@
             this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.менюToolStripMenuItem.Text = "Меню";
             // 
+            // загрузитьБазуToolStripMenuItem
+            // 
+            this.загрузитьБазуToolStripMenuItem.Name = "загрузитьБазуToolStripMenuItem";
+            this.загрузитьБазуToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.загрузитьБазуToolStripMenuItem.Text = "Загрузить базу";
+            this.загрузитьБазуToolStripMenuItem.Click += new System.EventHandler(this.загрузитьБазуToolStripMenuItem_Click);
+            // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(80)))));
             this.выходToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.выходToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.выходToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -79,7 +86,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Какие неисправности ПК существуют?",
+            "Какие причины неисправности ПК существуют?",
             "Является ли мат. плата частью компьютера?"});
             this.comboBox1.Location = new System.Drawing.Point(21, 46);
             this.comboBox1.Name = "comboBox1";
@@ -96,13 +103,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(494, 151);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
-            // 
-            // загрузитьБазуToolStripMenuItem
-            // 
-            this.загрузитьБазуToolStripMenuItem.Name = "загрузитьБазуToolStripMenuItem";
-            this.загрузитьБазуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.загрузитьБазуToolStripMenuItem.Text = "Загрузить базу";
-            this.загрузитьБазуToolStripMenuItem.Click += new System.EventHandler(this.загрузитьБазуToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
