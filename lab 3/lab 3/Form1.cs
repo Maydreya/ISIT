@@ -63,10 +63,17 @@ namespace lab_3
                 KnowledgeBase.bind = "cause";
                 mlv.Run(mlv.Check(KnowledgeBase.startname), richTextBox1);
             }
-            else
+            if (comboBox1.SelectedIndex == 1)
             {
                 richTextBox1.Clear();
                 KnowledgeBase.startname = "motherboard";
+                mlv.Run(mlv.Check(KnowledgeBase.startname), richTextBox1);
+            }
+            if (comboBox1.SelectedIndex == 2)
+            {
+                richTextBox1.Clear();
+                KnowledgeBase.startname = "computer";
+                KnowledgeBase.bind = "partof";
                 mlv.Run(mlv.Check(KnowledgeBase.startname), richTextBox1);
             }
         }

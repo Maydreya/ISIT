@@ -87,7 +87,8 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Какие причины неисправности ПК существуют?",
-            "Является ли мат. плата частью компьютера?"});
+            "Является ли мат. плата частью компьютера?",
+            "Из каких комплектующих состоит ПК?"});
             this.comboBox1.Location = new System.Drawing.Point(21, 46);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(494, 21);
