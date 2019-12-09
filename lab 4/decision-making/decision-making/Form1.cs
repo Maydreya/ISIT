@@ -32,7 +32,6 @@ namespace decision_making
                 if(b <= Data.experts)
                 label5.Text = b.ToString();
             }
-
             label13.Text = mod.wins[0].ToString();
         }
 
@@ -46,10 +45,10 @@ namespace decision_making
                 for (int i = 0; i < Data.alts; i++)
                 {
                     dataGridView1.Rows.Add(i + 1, "alternative " + (i+1), "0", "0%");
-                    dataGridView2.Columns.Add("alternative"+(i+1),"alternative " + (i + 1));
-                    dataGridView5.Columns.Add("alternative" + (i + 1), "alternative " + (i + 1));
-                    dataGridView7.Columns.Add("alternative" + (i + 1), "alternative " + (i + 1));
-                    dataGridView9.Columns.Add("alternative" + (i + 1), "alternative " + (i + 1));
+                    dataGridView2.Columns.Add("alternative"+(i+1),(i + 1) + " Место");
+                    dataGridView5.Columns.Add("alternative" + (i + 1), (i + 1) + " Место");
+                    dataGridView7.Columns.Add("alternative" + (i + 1), (i + 1) + " Место");
+                    dataGridView9.Columns.Add("alternative" + (i + 1), (i + 1) + " Место");
                     listBox1.Items.Add("alternative " + (i+1));
                 }
                 for(int i = 0; i < Data.experts; i++)
@@ -63,7 +62,9 @@ namespace decision_making
                 mod.CreateVotesMass(listBox1.Items.Count);
                 label5.Text = "1";
                 label6.Text = "Победитель: ";
+                label7.Text = "Победитель: ";
                 label9.Text = "Победитель: ";
+                label11.Text = "Победитель: ";
             }
             else
             {
@@ -148,7 +149,6 @@ namespace decision_making
                 }
             }
             int[] alter = mod.board(array);
-            int max, maxi;
             for (int i = 0; i < alter.Length; i++)
             {
                 dataGridView8.Rows.Add(alter[i].ToString());
@@ -180,12 +180,28 @@ namespace decision_making
             label9.Text = label9.Text + " " + mod.win;
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
+            int[,] array = new int[Data.experts, Data.alts];
+            for (int i = 0; i < dataGridView5.RowCount - 1; i++)
+            {
+                for (int j = 0; j < dataGridView5.ColumnCount; j++)
+                {
+                    array[i, j] = Convert.ToInt32(dataGridView5[j, i].Value);
+                }
+            }
+            int[] alter = mod.kopland(array);
+            for (int i = 0; i < alter.Length; i++)
+            {
+                dataGridView4.Rows.Add(alter[i].ToString());
+            }
 
+            mod.maximum(alter);
+            for (int i = 0; i < mod.wins.Count; i++)
+                label7.Text = label7.Text + "alternative " + mod.wins[i] + " ";
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

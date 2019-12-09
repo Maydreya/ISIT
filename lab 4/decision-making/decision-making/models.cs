@@ -10,11 +10,9 @@ namespace decision_making
     {
         public int[] votes { get; private set; }
         public double[] percents { get; private set; }
-        public string win;
         public List<int> wins = new List<int>();
+        public string win;
         string[] alt = new string[Data.alts];
-
-        public int winer = 1;
         //сброс голосов
         public void ClearVotes()
         {
@@ -37,12 +35,9 @@ namespace decision_making
                 summ += a;
             for (int i = 0; i < percents.Length; i++)
                 percents[i] = (double)votes[i] / (double)summ;
-           maximum(votes);
+            maximum(votes);
 
         }
-
-
-
         //явный победитель
         public List<string> yavn(int[,] arr)
         {
@@ -93,7 +88,7 @@ namespace decision_making
         {
             int n = Data.alts;
             int m = Data.experts;
-            int[,] dop = new int[n, n-1];
+            int[,] dop = new int[n, n - 1];
             for (int i = 1; i <= n; i++)
             {
                 int alt1 = 0, alt2 = 0, count = 0;
@@ -136,7 +131,7 @@ namespace decision_making
                 if (max < min[i])
                 {
                     max = min[i];
-                    p = i+1;
+                    p = i + 1;
                 }
 
             }
@@ -149,35 +144,50 @@ namespace decision_making
             int n = Data.alts;
             int m = Data.experts;
             int[] sum = new int[n];
-            for (int k = 0; k < n; k++)
+            for (int i = 1; i <= n; i++)
             {
-                for (int j = 0; j < n; j++)
+                for (int k = 0; k < m; k++)
                 {
-                    //Счетчик, когда один элемент больше другого
-                    int q = 0;
-                    //Счетчик, когда один элемент меньше другого
-                    int g = 0;
-                    if (k != j)
+                    for (int h = 0; h < n; h++)
                     {
-                        for (int i = 0; i < m; i++)
-                        {
-                            if (arr[i, k] < arr[i, j])
-                            {
-                                q++;
-                            }
-                            else g++;
-                        }
-                        sum[k] += q - (m - q);
+                        if (arr[k, h] == i) sum[i - 1] += n - h;
                     }
                 }
             }
             return sum;
         }
+        public int[] kopland(int[,] arr) //копланд
+        {
+            int n = Data.alts;
+            int m = Data.experts;
+            int[] solv = new int[n];
+            for (int i = 1; i <= n; i++)
+            {
+                int alt1 = 0, alt2 = 0;
+                for (int j = 1; j <= n; j++)
+                {
+                    if (i != j)
+                    {
+                        for (int k = 0; k < m; k++)
+                        {
+                            for (int h = 0; h < n; h++)
+                            {
+                                if (arr[k, h] == i) alt1 = h;
+                                if (arr[k, h] == j) alt2 = h;
+                            }
+                            if (alt1 < alt2) solv[i - 1]++;
+                            else solv[i - 1]--;
+                        }
+                    }
+                }
+            }
+            return solv;
+        }
 
         public void maximum(int[] array)
         {
             wins.Clear();
-            int value = 0;
+           int value = 0;
 
             for (int i = 0; i < array.Length; i++)
             {
@@ -188,7 +198,7 @@ namespace decision_making
             }
             for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] == value) wins.Add(i + 1);
+                if (array[i] == value) wins.Add(i+1);
             }
         }
     }

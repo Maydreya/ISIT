@@ -7,13 +7,3 @@ D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуаль�
 D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 4\decision-making\decision-making\obj\Debug\decision-making.csproj.GenerateResource.cache
 D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 4\decision-making\decision-making\obj\Debug\decision-making.exe
 D:\ПАПКА ТРУ КОДЕРОВ\7 семестр\Интеллектуальные ИСИТ\lab 4\decision-making\decision-making\obj\Debug\decision-making.pdb
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\bin\Debug\decision-making.exe.config
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\bin\Debug\decision-making.exe
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\bin\Debug\decision-making.pdb
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\obj\Debug\decision-making.csprojResolveAssemblyReference.cache
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\obj\Debug\decision_making.Form1.resources
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\obj\Debug\decision_making.Properties.Resources.resources
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\obj\Debug\decision-making.csproj.GenerateResource.Cache
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\obj\Debug\decision-making.csproj.CoreCompileInputs.cache
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\obj\Debug\decision-making.exe
-C:\Users\Михаил\Desktop\ISIT\lab 4\decision-making\decision-making\obj\Debug\decision-making.pdb
