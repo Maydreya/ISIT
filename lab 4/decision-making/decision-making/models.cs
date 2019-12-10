@@ -12,7 +12,7 @@ namespace decision_making
         public double[] percents { get; private set; }
         public List<int> wins = new List<int>();
         public string win;
-        string[] alt = new string[Data.alts];
+
         //сброс голосов
         public void ClearVotes()
         {
@@ -41,6 +41,7 @@ namespace decision_making
         //явный победитель
         public List<string> yavn(int[,] arr)
         {
+            string[] alt = new string[Data.alts];
             int n = Data.alts;
             int m = Data.experts;
             int plus = 0;

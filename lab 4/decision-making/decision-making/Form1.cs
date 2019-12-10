@@ -18,19 +18,21 @@ namespace decision_making
             InitializeComponent();
         }
 
+        private int b = 0;
+
         private void button3_Click(object sender, EventArgs e)
         {
-            int b = Convert.ToInt32(label5.Text);
-            if (b < Data.experts)
+            b++;
+            if (b <= Data.experts)
             {
                 mod.Bolshinstvo(listBox1.SelectedIndex);
                 for (int i = 0; i < mod.votes.Length; i++)
                     dataGridView1.Rows[i].Cells[2].Value = mod.votes[i];
                 for (int i = 0; i < mod.percents.Length; i++)
                     dataGridView1.Rows[i].Cells[3].Value = (Math.Round(mod.percents[i], 4) * 100).ToString() + "%";
-                b++;
                 if(b <= Data.experts)
                 label5.Text = b.ToString();
+                
             }
             label13.Text = mod.wins[0].ToString();
         }
@@ -202,6 +204,11 @@ namespace decision_making
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
