@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace decision_making
 {
-    class models
+   public  class models
     {
         public int[] votes { get; private set; }
         public double[] percents { get; private set; }
@@ -36,7 +36,6 @@ namespace decision_making
             for (int i = 0; i < percents.Length; i++)
                 percents[i] = (double)votes[i] / (double)summ;
             maximum(votes);
-
         }
         //явный победитель
         public List<string> yavn(int[,] arr)
